@@ -9,13 +9,16 @@ import { BodyComponent } from './body/body.component';
 import { HomeComponent } from './body/home/home.component';
 import { LoginComponent } from './body/login/login.component';
 import { Routes, RouterModule } from '@angular/router';
+import { CardsComponent } from './body/cards/cards.component';
+import { EditCardComponent } from './body/cards/edit-card/edit-card.component';
+import { DisplayCardsComponent } from './body/cards/display-cards/display-cards.component';
 
 
 const appRoutes: Routes = [
   {path : '', component: HomeComponent },
   {path : 'home', component: HomeComponent },
   {path : 'login', component: LoginComponent },
-  {path : '', component: HomeComponent }
+  {path : 'cards', component: CardsComponent }
 ];
 
 
@@ -26,7 +29,10 @@ const appRoutes: Routes = [
     FooterComponent,
     BodyComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    CardsComponent,
+    EditCardComponent,
+    DisplayCardsComponent
   ],
   imports: [
     BrowserModule,

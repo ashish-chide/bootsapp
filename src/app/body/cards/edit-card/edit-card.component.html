@@ -1,0 +1,53 @@
+<form class="form-horizontal" (ngSubmit)="onSubmitCard()" #c="ngForm">
+    <fieldset>
+      <legend>Your cards!!!</legend>
+
+
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <label class="col-form-label" for="inputDefault">Header</label>
+            <input type="text"
+              class="form-control"
+              placeholder="Header"
+              id="Header"
+              ngModel
+              name="header"
+              required
+              >
+            </div>
+          </div>
+    <div class="row">
+            <div class="col-lg-4">
+                <label class="col-form-label" for="inputDefault">Title</label>
+                <input type="text"
+                  class="form-control"
+                  placeholder="Title"
+                  id="Title"
+                  ngModel
+                  name="title"
+                  required
+                  >
+                </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-lg-6">
+                      <div class="form-group">
+                          <label for="exampleTextarea">Content</label>
+                          <textarea class="form-control"
+                          id="exampleTextarea"
+                          name ='content'
+                          rows="3"
+                          placeholder="Enter your details here "
+                          ngModel></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button type="submit"
+                    class="btn btn-primary"
+                    [disabled]="!c.valid">Add card</button>
+</div>
+</fieldset>
+</form>
