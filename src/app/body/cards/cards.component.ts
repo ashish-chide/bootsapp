@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Card } from 'src/app/card';
 
 
 @Component({
@@ -8,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class CardsComponent implements OnInit {
-
+  cardArray: Card[] = [];
   constructor() { }
 
+
+
+  onCardCreated(card: Card) {
+    this.cardArray.push(card);
+  }
   ngOnInit() {
   }
 

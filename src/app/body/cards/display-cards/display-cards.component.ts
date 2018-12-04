@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { EventEmitter } from 'events';
+import { Card } from 'src/app/card';
 
 
 @Component({
@@ -8,12 +10,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DisplayCardsComponent implements OnInit {
 
-header = 'header' ;
-title = 'Primary card title';
-content = 'Some quick example text to build on the card title and make up the bulk of the card' ;
+@Input() cards: Card;
+
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }
