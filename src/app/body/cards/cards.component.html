@@ -1,16 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="col">
-    <app-edit-card (cardCreated)="onCardCreated($event)">
-    </app-edit-card>
+      <app-edit-card (cardCreated)="onCardCreated($event)">
+      </app-edit-card>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col">
-      <app-display-cards *ngFor="let card of cardArray" [cards]="card">
-      </app-display-cards>
-    </div>
-  </div>
+<div class="row">
+  <div class="col">
+  <app-display-cards *ngFor="let card of cardArray" [cards]="card">
+  </app-display-cards>
+
+</div>
+
+</div>
 
 </div>
