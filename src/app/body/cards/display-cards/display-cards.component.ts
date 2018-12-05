@@ -10,7 +10,13 @@ import { Card } from 'src/app/card';
 })
 export class DisplayCardsComponent implements OnInit {
 
-@Input() cards: Card;
+@Input() cards: {
+  header: string ;
+  title: string ;
+  content: string;
+
+ };
+
 
   constructor() { }
 
