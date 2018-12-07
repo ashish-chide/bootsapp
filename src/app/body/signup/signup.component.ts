@@ -2,13 +2,12 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from '../auth.service';
 
-
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css']
 })
-export class LoginComponent implements OnInit {
+export class SignupComponent implements OnInit {
   @ViewChild('f') signupform: NgForm;
   uname = '';
   user = {
@@ -16,36 +15,20 @@ export class LoginComponent implements OnInit {
     email : '' ,
     password : ''
  };
-  submitted = false;
   constructor(private authService: AuthService) { }
+
   ngOnInit() {
-
   }
 
+  onSignup() {
 
-  suggestusername() {
-    const suggestedusername = 'superuser';
-    this.signupform.form.patchValue({
-      userData: {
-        username: suggestedusername
-      }
-    });
-  }
-
- onSubmit() {
-    this.submitted = true ;
     this.user.name = this.signupform.value.userData.username ;
     this.user.email = this.signupform.value.userData.email ;
     this.user.password = this.signupform.value.userData.password ;
 
-    this.authService.signinUser(this.user.email , this.user.password ) ;
+    this.authService.signupUser(this.user.email , this.user.password ) ;
 
     this.signupform.reset();
 
 }
-
-
-
-
-
 }

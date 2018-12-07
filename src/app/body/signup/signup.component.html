@@ -1,4 +1,4 @@
-<form class="form-horizontal" (ngSubmit)="onSubmit()" #f="ngForm">
+<form class="form-horizontal" (ngSubmit)="onSignup()" #f="ngForm">
   <fieldset ngModelGroup="userData" #userData="ngModelGroup">
     <legend>Login</legend>
 
@@ -8,9 +8,7 @@
         <input type="text" class="form-control" placeholder="username" id="username" ngModel name="username"
           [(ngModel)]="uname" require>
         <small id="usernamehelp" class="form-text text-muted">your username : {{ uname }}</small>
-        <small id="suggest" class="form-text text-muted">
-          <button type="button" class="btn btn-outline-primary" (click)="suggestusername()">Suggest username</button>
-        </small>
+
       </div>
     </div>
     <div class="form-group">

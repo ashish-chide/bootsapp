@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../body/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   collapsed = true;
-     toggleCollapsed(): void {
-       this.collapsed = !this.collapsed;
-     }
-  constructor() { }
+  toggleCollapsed(): void {
+    this.collapsed = !this.collapsed;
+  }
 
+
+  constructor(private authService: AuthService) {
+
+  }
   ngOnInit() {
+
+  }
+
+  onLogout() {
+    this.authService.logout();
   }
 
 }
+

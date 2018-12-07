@@ -22,4 +22,5 @@ export class EditCardComponent implements OnInit {
      this.cardCreated.emit( this.EditCardForm.value );
      console.log( this.EditCardForm.value) ;
   }
+
 }
