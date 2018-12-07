@@ -10,7 +10,7 @@
       <li class="nav-item active" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
         <a class="nav-link" routerLink="home">Home <span class="sr-only">(current)</span></a>
       </li>
-    <ng-template [ngIf]="!authService.isAuthenticated()">
+    <ng-template [ngIf]="!isAuthenticated()">
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" routerLink="login">login</a>
         </li>
@@ -19,7 +19,7 @@
           <a class="nav-link" routerLink="signup">Signup</a>
         </li>
       </ng-template>
-      <ng-template [ngIf]="authService.isAuthenticated()">
+      <ng-template [ngIf]="isAuthenticated()">
           <li class="nav-item" routerLinkActive="active">
             <a class="nav-link" routerLink="cards">Cards</a>
           </li>
