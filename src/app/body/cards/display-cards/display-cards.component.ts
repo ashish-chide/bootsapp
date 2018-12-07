@@ -14,9 +14,9 @@ import { JsonPipe } from '@angular/common';
 export class DisplayCardsComponent  {
 
   @Input() cards: {
-    header: string;
-    title: string;
-    content: string;
+    header?: string;
+    title?: string;
+    content?: string;
 
   };
 
@@ -24,24 +24,24 @@ export class DisplayCardsComponent  {
 
   constructor(private http: HttpClient, private authService: AuthService) { }
 
-  onCardDisplay() {
-    const token = this.authService.getToken() ;
-    this.http.get<Card[]>('https://bootsapp-c6772.firebaseio.com/cards.json?auth=' + token)
-    .pipe(map(
-      (carde) => {
+  // onCardDisplay() {
+  //   const token = this.authService.getToken() ;
+  //   this.http.get<Card[]>('https://bootsapp-c6772.firebaseio.com/cards.json?auth=' + token)
+  //   .pipe(map(
+  //     (carde) => {
 
-          return carde ;
+  //         return carde ;
 
-      }
-    ))
-    .subscribe(
-      (carde: Card[]) => {
-        this.cards = carde ;
-      }
-    );
+  //     }
+  //   ))
+  //   .subscribe(
+  //     (carde: Card[]) => {
+  //       this.cards = carde ;
+  //     }
+  //   );
 
 
-  }
+  // }
 }
 
 
