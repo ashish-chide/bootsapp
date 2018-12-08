@@ -8,9 +8,18 @@ import * as firebase from 'firebase' ;
 export class AppComponent implements OnInit {
   title = 'bootsapp';
   ngOnInit() {
-firebase.initializeApp({
-  apiKey: 'AIzaSyBJxmFVXnjwuww2TuVABnjxUFOB1jiTLgQ',
-  authDomain: 'bootsapp-c6772.firebaseapp.com',
-});
+    // const config = {
+    //   apiKey: 'AIzaSyDnLSSldKNzwwgTnIbSeDi4LuvcDzzIeqU',
+    //   authDomain: 'bootsapp-1d940.firebaseapp.com',
+    //   databaseURL: 'https://bootsapp-1d940.firebaseio.com',
+    //   projectId: 'bootsapp-1d940',
+    //   storageBucket: '',
+    //   messagingSenderId: '541430002667'
+    // };
+    firebase.initializeApp({
+      apiKey: 'AIzaSyDnLSSldKNzwwgTnIbSeDi4LuvcDzzIeqU',
+      authDomain: 'bootsapp-1d940.firebaseapp.com'
+    });
+
   }
 }

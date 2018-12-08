@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 
+
 const appRoutes: Routes = [
   {path : '', component: HomeComponent },
   {path : 'home', component: HomeComponent },
@@ -45,8 +46,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
-
-  ],
+],
   providers: [AuthService , AuthGuardService ],
   bootstrap: [AppComponent]
 })

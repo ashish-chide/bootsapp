@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
     password : ''
  };
   submitted = false;
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService , private router: Router) { }
   ngOnInit() {
 
   }
